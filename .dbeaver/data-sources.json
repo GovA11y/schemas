@@ -1,4 +1,11 @@
 {
 	"folders": {},
-	"connections": {}
+	"connections": {},
+	"auth-profiles": {
+		"llpaet8evbtx8f": {
+			"name": "local_dev",
+			"auth-model": "native",
+			"save-password": true
+		}
+	}
 }
