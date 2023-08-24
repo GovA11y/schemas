@@ -70,4 +70,3 @@ networks:
   postgres:
     attachable: true
     driver: bridge
-
