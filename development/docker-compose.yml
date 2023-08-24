@@ -36,7 +36,11 @@ services:
 
     testing:
       image: gova11y/postgres:testing
+<<<<<<< HEAD
       hostname: development
+=======
+      hostname: testing
+>>>>>>> main
       ports:
       - "7052:5432"
       volumes:
@@ -52,7 +56,11 @@ services:
 
     production:
       image: gova11y/postgres:latest
+<<<<<<< HEAD
       hostname: development
+=======
+      hostname: production
+>>>>>>> main
       ports:
       - "7053:5432"
       volumes:
@@ -69,4 +77,9 @@ services:
 networks:
   postgres:
     attachable: true
+<<<<<<< HEAD
     driver: bridge
+=======
+    driver: bridge
+
+>>>>>>> main
