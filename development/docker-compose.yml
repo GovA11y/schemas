@@ -1,3 +1,73 @@
-# Local Development Docker Compose
-# Development, Test, & Production Environments
-# Development
+# Local Docker Compose Env
+version: '3.8'
+
+services:
+    baseline:
+      image: gova11y/postgres:latest
+      hostname: baseline
+      ports:
+      - "7050:5432"
+      volumes:
+      - /mnt/user/dbstorage/gova11y/baseline:/var/lib/postgresql/data
+      deploy:
+        restart_policy:
+          condition: always
+          delay: 10s
+          max_attempts: 5
+          window: 120s
+      networks:
+        - postgres
+
+    development:
+      image: gova11y/postgres:development
+      hostname: development
+      ports:
+      - "7051:5432"
+      volumes:
+      - /mnt/user/dbstorage/gova11y/development:/var/lib/postgresql/data
+      deploy:
+        restart_policy:
+          condition: always
+          delay: 10s
+          max_attempts: 5
+          window: 120s
+      networks:
+        - postgres
+
+    testing:
+      image: gova11y/postgres:testing
+      hostname: development
+      ports:
+      - "7052:5432"
+      volumes:
+      - /mnt/user/dbstorage/gova11y/testing:/var/lib/postgresql/data
+      deploy:
+        restart_policy:
+          condition: always
+          delay: 10s
+          max_attempts: 5
+          window: 120s
+      networks:
+        - postgres
+
+    production:
+      image: gova11y/postgres:latest
+      hostname: development
+      ports:
+      - "7053:5432"
+      volumes:
+      - /mnt/user/dbstorage/gova11y/production:/var/lib/postgresql/data
+      deploy:
+        restart_policy:
+          condition: always
+          delay: 10s
+          max_attempts: 5
+          window: 120s
+      networks:
+        - postgres
+
+networks:
+  postgres:
+    attachable: true
+    driver: bridge
+

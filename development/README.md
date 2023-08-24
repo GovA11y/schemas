@@ -2,11 +2,18 @@
 
 This document outlines the workflow and environments used for managing the Postgres database schema.
 
+[DBeaver Docs on Schema Compare](https://dbeaver.com/docs/dbeaver/Schema-compare/)
+
 ## Environments
 
 ```mermaid
 
 ```
+
+**Local Developer Credentials**
+**Authentication:** Database Native
+**Username:** `gova11y_developer`
+**Password:** `SuperSecura11y`
 
 ### Production
 
