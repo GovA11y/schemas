@@ -9,12 +9,6 @@ services:
         - "7050:5432"
       volumes:
         - /mnt/user/dbstorage/gova11y/baseline:/var/lib/postgresql/data
-      deploy:
-        restart_policy:
-          condition: always
-          delay: 10s
-          max_attempts: 5
-          window: 120s
       networks:
         - utilities
 
@@ -25,12 +19,6 @@ services:
         - "7051:5432"
       volumes:
         - /mnt/user/dbstorage/gova11y/development:/var/lib/postgresql/data
-      deploy:
-        restart_policy:
-          condition: always
-          delay: 10s
-          max_attempts: 5
-          window: 120s
       networks:
         - utilities
 
@@ -41,12 +29,6 @@ services:
         - "7052:5432"
       volumes:
         - /mnt/user/dbstorage/gova11y/testing:/var/lib/postgresql/data
-      deploy:
-        restart_policy:
-          condition: always
-          delay: 10s
-          max_attempts: 5
-          window: 120s
       networks:
         - utilities
 
@@ -57,12 +39,6 @@ services:
         - "7053:5432"
       volumes:
         - /mnt/user/dbstorage/gova11y/production:/var/lib/postgresql/data
-      deploy:
-        restart_policy:
-          condition: always
-          delay: 10s
-          max_attempts: 5
-          window: 120s
       networks:
         - utilities
 
