@@ -6,9 +6,9 @@ services:
       image: gova11y/postgres:latest
       hostname: baseline
       ports:
-      - "7050:5432"
+        - "7050:5432"
       volumes:
-      - /mnt/user/dbstorage/gova11y/baseline:/var/lib/postgresql/data
+        - /mnt/user/dbstorage/gova11y/baseline:/var/lib/postgresql/data
       deploy:
         restart_policy:
           condition: always
@@ -16,15 +16,15 @@ services:
           max_attempts: 5
           window: 120s
       networks:
-        - postgres
+        - utilities
 
     development:
       image: gova11y/postgres:development
       hostname: development
       ports:
-      - "7051:5432"
+        - "7051:5432"
       volumes:
-      - /mnt/user/dbstorage/gova11y/development:/var/lib/postgresql/data
+        - /mnt/user/dbstorage/gova11y/development:/var/lib/postgresql/data
       deploy:
         restart_policy:
           condition: always
@@ -32,15 +32,15 @@ services:
           max_attempts: 5
           window: 120s
       networks:
-        - postgres
+        - utilities
 
     testing:
       image: gova11y/postgres:testing
       hostname: testing
       ports:
-      - "7052:5432"
+        - "7052:5432"
       volumes:
-      - /mnt/user/dbstorage/gova11y/testing:/var/lib/postgresql/data
+        - /mnt/user/dbstorage/gova11y/testing:/var/lib/postgresql/data
       deploy:
         restart_policy:
           condition: always
@@ -48,15 +48,15 @@ services:
           max_attempts: 5
           window: 120s
       networks:
-        - postgres
+        - utilities
 
     production:
       image: gova11y/postgres:latest
       hostname: production
       ports:
-      - "7053:5432"
+        - "7053:5432"
       volumes:
-      - /mnt/user/dbstorage/gova11y/production:/var/lib/postgresql/data
+        - /mnt/user/dbstorage/gova11y/production:/var/lib/postgresql/data
       deploy:
         restart_policy:
           condition: always
@@ -64,9 +64,8 @@ services:
           max_attempts: 5
           window: 120s
       networks:
-        - postgres
+        - utilities
 
 networks:
-  postgres:
-    attachable: true
-    driver: bridge
+  utilities:
+    external: true
