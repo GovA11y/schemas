@@ -42,6 +42,16 @@ services:
       networks:
         - utilities
 
+    postgrest:
+      image: postgrest/postgrest:latest
+      hostname: postgrest
+      ports:
+        - "7060:3000"
+      environment:
+        - PGRST_DB_URI
+      networks:
+        - utilities
+
 networks:
   utilities:
     external: true
