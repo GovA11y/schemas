@@ -49,8 +49,8 @@ services:
         - "7060:3000"
       environment:
         - PGRST_DB_URI
-        - PGRST_SERVER_PROXY_URI=http://postgrest:3000
         - PGRST_CORS_DOMAIN=*
+        - PGRST_JWT_SECRET
       networks:
         - utilities
 
@@ -60,7 +60,7 @@ services:
       ports:
         - "7061:8080"
       environment:
-        - API_URL=http://postgrest:3000/
+        - API_URL=http://postgrest:3000
       networks:
         - utilities
 
