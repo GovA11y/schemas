@@ -1,11 +1,222 @@
 {
-	"folders": {},
-	"connections": {},
+	"folders": {
+		"local": {}
+	},
+	"connections": {
+		"postgres-jdbc-18a2a0ea633-4a383323d01a808c": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "Development",
+			"save-password": true,
+			"folder": "local",
+			"configuration": {
+				"host": "192.168.1.29",
+				"port": "7051",
+				"database": "gova11y",
+				"url": "jdbc:postgresql://192.168.1.29:7051/gova11y",
+				"configurationType": "MANUAL",
+				"home": "PostgreSQL 15.4 (Homebrew",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "profile",
+				"auth-properties": {
+					"profile-id": "llpaet8evbtx8f"
+				},
+				"handlers": {}
+			}
+		},
+		"postgres-jdbc-18a2a102d3a-152a81813e03d596": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "Baseline",
+			"save-password": true,
+			"folder": "local",
+			"configuration": {
+				"host": "rightstuff.local",
+				"port": "7050",
+				"database": "gova11y",
+				"url": "jdbc:postgresql://rightstuff.local:7050/gova11y",
+				"configurationType": "MANUAL",
+				"home": "PostgreSQL 15.4 (Homebrew",
+				"type": "baseline",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "profile",
+				"auth-properties": {
+					"profile-id": "llpaet8evbtx8f"
+				},
+				"handlers": {}
+			}
+		},
+		"postgres-jdbc-18a2a103414-4b0349558c6247bd": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "Production",
+			"save-password": true,
+			"folder": "local",
+			"configuration": {
+				"host": "rightstuff.local",
+				"port": "7053",
+				"database": "gova11y",
+				"url": "jdbc:postgresql://rightstuff.local:7053/gova11y",
+				"configurationType": "MANUAL",
+				"home": "PostgreSQL 15.4 (Homebrew",
+				"type": "prod",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "profile",
+				"auth-properties": {
+					"profile-id": "llpaet8evbtx8f"
+				},
+				"handlers": {}
+			}
+		},
+		"postgres-jdbc-18a2a10370b-499091074f8f4bae": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "Testing",
+			"save-password": true,
+			"folder": "local",
+			"configuration": {
+				"host": "rightstuff.local",
+				"port": "7052",
+				"database": "gova11y",
+				"url": "jdbc:postgresql://rightstuff.local:7052/gova11y",
+				"configurationType": "MANUAL",
+				"home": "PostgreSQL 15.4 (Homebrew",
+				"type": "test",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "profile",
+				"auth-properties": {
+					"profile-id": "llpaet8evbtx8f"
+				},
+				"handlers": {}
+			}
+		}
+	},
 	"auth-profiles": {
 		"llpaet8evbtx8f": {
 			"name": "local_dev",
 			"auth-model": "native",
 			"save-password": true
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "234,234,234",
+			"description": "Development environment for applying and testing changes",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		},
+		"baseline": {
+			"name": "Baseline",
+			"color": "117,213,255",
+			"description": "Snapshot of the current production schema without data",
+			"auto-commit": false,
+			"confirm-execute": true,
+			"confirm-data-change": true,
+			"auto-close-transactions": true,
+			"security": {
+				"permission-restrictions": [
+					"edit.data",
+					"edit.meta",
+					"import.data"
+				]
+			}
+		},
+		"prod": {
+			"name": "Production",
+			"color": "org.jkiss.dbeaver.color.connectionType.prod.background",
+			"description": "Live production database with real data",
+			"auto-commit": false,
+			"confirm-execute": true,
+			"confirm-data-change": true,
+			"auto-close-transactions": true,
+			"security": {
+				"permission-restrictions": [
+					"edit.data",
+					"edit.meta",
+					"import.data"
+				]
+			}
+		},
+		"test": {
+			"name": "Test",
+			"color": "254,252,120",
+			"description": "Pre-production testing environment",
+			"auto-commit": false,
+			"confirm-execute": true,
+			"confirm-data-change": true,
+			"auto-close-transactions": false,
+			"security": {
+				"permission-restrictions": [
+					"edit.data",
+					"edit.meta",
+					"edit.execute",
+					"import.data"
+				]
+			}
 		}
 	}
 }
